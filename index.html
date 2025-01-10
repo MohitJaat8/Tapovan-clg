@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapovan Mansik Vidyalay - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Tapovan Mansik Vidyalay</h1>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>Select Your Role</h2>
+            <button onclick="location.href='student-login.html'">Student Login</button>
+            <button onclick="location.href='parent-login.html'">Parent Login</button>
+            <button onclick="location.href='institute-login.html'">Institute Login</button>
+
+            <p>Don't have an account? Signup below:</p>
+            <div class="dropdown">
+                <button class="dropdown-button">Signup</button>
+                <div class="dropdown-menu">
+                    <a href="student-signup.html">Student Signup</a>
+                    <a href="parent-signup.html">Parent Signup</a>
+                    <a href="institute-signup.html">Institute Signup</a>
+                </div>
+            </div>
+
+            <button class="contact-btn" onclick="showContact()">Contact Support</button>
+        </div>
+    </main>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeContact()">&times;</span>
+            <h2>Contact Support</h2>
+            <p><strong>Phone/Mobile:</strong> 123-456-7890</p>
+            <p><strong>Email:</strong> support@tapovan.edu</p>
+            <p><strong>Address:</strong> Tapovan Mansik Vidyalay, Main Street, City, Country</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
