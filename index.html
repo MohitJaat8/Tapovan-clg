@@ -3,45 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tapovan Mansik Vidyalay - Home</title>
+    <title>Manovikas Assessment Tool</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Tapovan Mansik Vidyalay</h1>
-    </header>
-    <main>
-        <div class="login-container">
-            <h2>Select Your Role</h2>
-            <button onclick="location.href='student-login.html'">Student Login</button>
-            <button onclick="location.href='parent-login.html'">Parent Login</button>
-            <button onclick="location.href='institute-login.html'">Institute Login</button>
+    <div id="app">
+        <h1>Manovikas Assessment Tool</h1>
 
-            <p>Don't have an account? Signup below:</p>
-            <div class="dropdown">
-                <button class="dropdown-button">Signup</button>
-                <div class="dropdown-menu">
-                    <a href="student-signup.html">Student Signup</a>
-                    <a href="parent-signup.html">Parent Signup</a>
-                    <a href="institute-signup.html">Institute Signup</a>
-                </div>
-            </div>
-
-            <button class="contact-btn" onclick="showContact()">Contact Support</button>
+        <!-- Animated University Name -->
+        <div id="university-name">
+            Tapovan Mansik Vidyalay, Ganganagar, Rajasthan
         </div>
-    </main>
 
-    <!-- Contact Modal -->
-    <div id="contactModal" class="contact-modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeContact()">&times;</span>
-            <h2>Contact Support</h2>
-            <p><strong>Phone/Mobile:</strong> 123-456-7890</p>
-            <p><strong>Email:</strong> support@tapovan.edu</p>
-            <p><strong>Address:</strong> Tapovan Mansik Vidyalay, Main Street, City, Country</p>
+        <!-- Login/Signup Form -->
+        <div id="login-form">
+            <h2 id="form-title">Login</h2>
+            <input type="text" id="name" placeholder="Name (For Signup only)" style="display: none;">
+            <select id="role">
+                <option value="">Select Role</option>
+                <option value="institute">Institute</option>
+                <option value="student">Student</option>
+                <option value="parent">Parent</option>
+            </select>
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Password" />
+            <button id="auth-btn">Login</button>
+            <p id="toggle-link" onclick="toggleForm()">Don't have an account? Signup</p>
+        </div>
+
+        <!-- Assessment Result Section -->
+        <div id="assessment-result" style="display: none;">
+            <h3>Assessment Results</h3>
+            <h4>Total Score: <span id="total-score">35</span></h4>
+            <h4>Percentage: <span id="percentage">70%</span></h4>
+            <canvas id="assessment-graph"></canvas>
+        </div>
+
+        <!-- Contact Support Section -->
+        <div id="contact-support">
+            <h3>Contact Support</h3>
+            <p>If you need any help, feel free to reach out to us:</p>
+            <input type="email" id="support-email" placeholder="Your Email" />
+            <textarea id="support-message" placeholder="Your Message"></textarea>
+            <button id="submit-support">Submit</button>
+        </div>
+
+        <!-- Knowledge About Manovikas -->
+        <div id="knowledge-about">
+            <h3>About Manovikas</h3>
+            <p>Manovikas focuses on improving the mental and social well-being of individuals with developmental challenges. It offers customized programs, including education, therapy, and assessments, to help individuals achieve their potential.</p>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
