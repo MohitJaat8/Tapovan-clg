@@ -3,59 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manovikas Assessment Tool</title>
-    <link rel="stylesheet" href="style.css">
+    <title>P.A.T.-C.W.C.P.</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="app">
-        <h1>Manovikas Assessment Tool</h1>
+    <h2>Progressive Assessment Tool for Children With C.P. (P.A.T.-C.W.C.P.)</h2>
 
-        <!-- Animated University Name -->
-        <div id="university-name">
-            Tapovan Mansik Vidyalay, Ganganagar, Rajasthan
-        </div>
+    <div class="container">
+        <h3>Welcome to P.A.T.-C.W.C.P.</h3>
+        <p>This assessment tool is designed to evaluate children with Cerebral Palsy (C.P.) in various activity areas.</p>
 
-        <!-- Login/Signup Form -->
-        <div id="login-form">
-            <h2 id="form-title">Login</h2>
-            <input type="text" id="name" placeholder="Name (For Signup only)" style="display: none;">
-            <select id="role">
-                <option value="">Select Role</option>
-                <option value="institute">Institute</option>
-                <option value="student">Student</option>
-                <option value="parent">Parent</option>
-            </select>
-            <input type="email" id="email" placeholder="Email" />
-            <input type="password" id="password" placeholder="Password" />
-            <button id="auth-btn">Login</button>
-            <p id="toggle-link" onclick="toggleForm()">Don't have an account? Signup</p>
-        </div>
+        <h3>Child Activities Assessed</h3>
+        <ul>
+            <li><strong>Motor Skills:</strong> Sitting, walking, holding objects, balancing.</li>
+            <li><strong>Communication:</strong> Responding to name, following instructions, speaking.</li>
+            <li><strong>Social Interaction:</strong> Recognizing family, interacting with peers.</li>
+            <li><strong>Daily Living Skills:</strong> Dressing, eating, toilet use.</li>
+            <li><strong>Cognitive Abilities:</strong> Identifying shapes/colors, understanding routines.</li>
+        </ul>
 
-        <!-- Assessment Result Section -->
-        <div id="assessment-result" style="display: none;">
-            <h3>Assessment Results</h3>
-            <h4>Total Score: <span id="total-score">35</span></h4>
-            <h4>Percentage: <span id="percentage">70%</span></h4>
-            <canvas id="assessment-graph"></canvas>
-        </div>
-
-        <!-- Contact Support Section -->
-        <div id="contact-support">
-            <h3>Contact Support</h3>
-            <p>If you need any help, feel free to reach out to us:</p>
-            <input type="email" id="support-email" placeholder="Your Email" />
-            <textarea id="support-message" placeholder="Your Message"></textarea>
-            <button id="submit-support">Submit</button>
-        </div>
-
-        <!-- Knowledge About Manovikas -->
-        <div id="knowledge-about">
-            <h3>About Manovikas</h3>
-            <p>Manovikas focuses on improving the mental and social well-being of individuals with developmental challenges. It offers customized programs, including education, therapy, and assessments, to help individuals achieve their potential.</p>
+        <div class="button-container">
+            <button onclick="window.location.href='register.html'">Register</button>
+            <button onclick="window.location.href='login.html'">Login</button>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="app.js"></script>
 </body>
 </html>
